@@ -1,9 +1,12 @@
 # Project place file
 /roblox-game.rbxlx
 
-# Roblox Studio lock files
-/*.rbxlx.lock
-/*.rbxl.lock
+# Ignore lock files
+*.lock
+
+# Packages should not be tracked
+Packages/
+ServerPackages/
 
 # luau-lsp sourcemap
 /sourcemap.json
