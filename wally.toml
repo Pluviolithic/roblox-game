@@ -1,0 +1,20 @@
+[package]
+name = "plum/roblox-game"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+Red = "red-blox/red@2.0.0"
+rodux = "roblox/rodux@3.0.0"
+jest = "jsdotlua/jest@3.4.1"
+guard = "red-blox/guard@1.0.1"
+immut = "solarhorizon/immut@0.4.4"
+react-roblox = "jsdotlua/react-roblox@17.1.0"
+rodux-utils = "solarhorizon/rodux-utils@0.3.3"
+react-rodux = "solarhorizon/react-rodux@0.2.2"
+roblox-lua-promise = "jsdotlua/roblox-lua-promise@3.5.0"
+
+[server-dependencies]
+Cmdr = "evaera/cmdr@1.9.0"
+ProfileService = "grilme99/profileservice@1.0.0"
