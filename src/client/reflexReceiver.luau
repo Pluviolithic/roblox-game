@@ -18,3 +18,5 @@ dispatch:On(function(actions)
 end)
 
 producer:applyMiddleware(receiver.middleware)
+
+return 0

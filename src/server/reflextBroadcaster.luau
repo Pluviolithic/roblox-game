@@ -20,3 +20,5 @@ start:On(function(player)
 end)
 
 producer:applyMiddleware(broadcaster.middleware)
+
+return 0
