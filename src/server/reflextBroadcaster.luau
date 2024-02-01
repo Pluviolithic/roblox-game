@@ -10,7 +10,7 @@ local dispatch = require(ReplicatedStorage.Common.RedEvents.dispatch):Server()
 
 local sharedActions = {}
 
-for _, slice in slices do
+for _, slice in pairs(slices) do
 	for actionName in slice:getActions() do
 		sharedActions[actionName] = true
 	end

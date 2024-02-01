@@ -10,6 +10,7 @@ local dispatch = require(ReplicatedStorage.Common.RedEvents.dispatch):Client()
 local receiver = Reflex.createBroadcastReceiver {
 	start = function()
 		start:Fire()
+		return
 	end,
 }
 

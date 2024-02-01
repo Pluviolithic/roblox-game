@@ -11,7 +11,7 @@ type RootActions = slices.SharedActions
 
 local rootSlices = {}
 
-for name, slice in slices do
+for name, slice in pairs(slices) do
 	rootSlices[name] = slice
 end
 
