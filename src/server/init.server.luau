@@ -17,7 +17,7 @@ Players.PlayerAdded:Connect(function(player)
 	})
 
 	while true do
-		task.wait(10)
-		producer.incrementStat(player.Name, "Cash", 5)
+		task.wait(5)
+		producer.incrementStat(player.Name, "Money", 1)
 	end
 end)
