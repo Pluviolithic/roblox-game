@@ -13,6 +13,7 @@ export type StatsState = {
 
 export type StatsActions = {
 	addPlayerData: (id: string, data: { [any]: any }) -> (),
+	removePlayerData: (id: string) -> (),
 	incrementStat: (id: string, stat: string, amount: number) -> (),
 }
 
@@ -25,9 +26,17 @@ local statsSlice = Reflex.createProducer(initialState, {
 			return
 		end) :: StatsState
 	end,
+	removePlayerData = function(state: StatsState, id: string): StatsState
+		return immut.produce(state, function(draft)
+			draft[id] = nil
+			return
+		end) :: StatsState
+	end,
 	incrementStat = function(state: StatsState, id: string, stat: string, amount: number): StatsState
 		return immut.produce(state, function(draft)
-			draft[id][stat] = (draft[id][stat] or 0) + amount
+			if draft[id] then
+				draft[id][stat] = (draft[id][stat] or 0) + amount
+			end
 			return
 		end) :: StatsState
 	end,

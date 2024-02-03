@@ -18,9 +18,9 @@ version = "4.0.0"
 dependencies = []
 
 [[package]]
-name = "grilme99/profileservice"
-version = "1.0.0"
-dependencies = []
+name = "howmanysmall/janitor"
+version = "1.15.7"
+dependencies = [["Promise", "evaera/promise@4.0.0"]]
 
 [[package]]
 name = "jsdotlua/boolean"
@@ -263,9 +263,19 @@ version = "4.3.1"
 dependencies = [["Promise", "evaera/promise@4.0.0"]]
 
 [[package]]
+name = "nezuo/lapis"
+version = "0.2.9"
+dependencies = [["Promise", "evaera/promise@4.0.0"]]
+
+[[package]]
+name = "osyrisrblx/t"
+version = "3.0.0"
+dependencies = []
+
+[[package]]
 name = "plum/roblox-game"
 version = "0.1.0"
-dependencies = [["Red", "red-blox/red@2.1.1"], ["fusion", "elttob/fusion@0.2.0"], ["guard", "red-blox/guard@1.0.1"], ["immut", "solarhorizon/immut@0.4.4"], ["jest", "jsdotlua/jest@3.4.1"], ["reflex", "littensy/reflex@4.3.1"], ["roblox-lua-promise", "jsdotlua/roblox-lua-promise@3.5.0"]]
+dependencies = [["Red", "red-blox/red@2.1.1"], ["fusion", "elttob/fusion@0.2.0"], ["guard", "red-blox/guard@1.0.1"], ["immut", "solarhorizon/immut@0.4.4"], ["janitor", "howmanysmall/janitor@1.15.7"], ["jest", "jsdotlua/jest@3.4.1"], ["reflex", "littensy/reflex@4.3.1"], ["roblox-lua-promise", "jsdotlua/roblox-lua-promise@3.5.0"], ["t", "osyrisrblx/t@3.0.0"], ["Cmdr", "evaera/cmdr@1.12.0"], ["lapis", "nezuo/lapis@0.2.9"]]
 
 [[package]]
 name = "red-blox/future"

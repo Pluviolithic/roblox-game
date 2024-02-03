@@ -5,14 +5,20 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
+t = "osyrisrblx/t@3.0.0"
 Red = "red-blox/red@2.0.0"
 jest = "jsdotlua/jest@3.4.1"
 guard = "red-blox/guard@1.0.1"
 fusion = "elttob/fusion@0.2.0"
 reflex = "littensy/reflex@4.3.1"
 immut = "solarhorizon/immut@0.4.4"
+janitor = "howmanysmall/janitor@1.15.7"
 roblox-lua-promise = "jsdotlua/roblox-lua-promise@3.5.0"
 
 [server-dependencies]
 Cmdr = "evaera/cmdr@1.9.0"
-ProfileService = "grilme99/profileservice@1.0.0"
+lapis = "nezuo/lapis@0.2.9"
+
+[place]
+shared-packages = "game.ReplicatedStorage.Common.lib"
+server-packages = "game.ServerScriptService.Server.lib"

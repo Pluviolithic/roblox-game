@@ -4,6 +4,8 @@ local ServerScriptService = game:GetService "ServerScriptService"
 local producer = require(ServerScriptService.Server.producer)
 
 require(ServerScriptService.Server.reflextBroadcaster)
+require(ServerScriptService.Server.documents)
+require(ServerScriptService.Server.playerDataSaver)
 
 Players.PlayerAdded:Connect(function(player)
 	producer.addPlayerData(player.Name, {
@@ -17,7 +19,7 @@ Players.PlayerAdded:Connect(function(player)
 	})
 
 	while true do
-		task.wait(5)
+		task.wait(10)
 		producer.incrementStat(player.Name, "Money", 1)
 	end
 end)

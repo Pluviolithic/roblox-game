@@ -5,26 +5,20 @@ local producer = require(StarterPlayer.StarterPlayerScripts.Client.producer)
 
 local player = Players.LocalPlayer
 
-local function selectPlayerStatsById(state: producer.RootState)
-	return state.stats
-end
-
-local function getPlayerId(_, index: string)
-	return index
+local function playerExists(state: producer.RootState)
+	return state.stats[player.Name]
 end
 
 local function selectMoney(state: producer.RootState)
-	return state.stats[player.Name].Money
+	if state.stats[player.Name] then
+		return state.stats[player.Name].Money
+	else
+		return 0
+	end
 end
 
-producer:observe(selectPlayerStatsById, getPlayerId, function()
-	print "player added"
-	producer:subscribe(selectMoney, function(money)
-		print("Money:", money)
-	end)
-	return function()
-		print "player removed"
-	end
+producer:subscribe(selectMoney, function(money)
+	print("Money:", money)
 end)
 
 require(StarterPlayer.StarterPlayerScripts.Client.reflexReceiver)
