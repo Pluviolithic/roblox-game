@@ -1,6 +1,6 @@
 PACKAGE_INDEX_DIR=./Packages/_Index
 
-setup: t_fix
+setup: wally
 
 rust:
 CARGO := $(shell cargo --version 2>/dev/null)
@@ -21,10 +21,3 @@ wally: aftman
 	rojo sourcemap "default.project.json" --output sourcemap.json
 	wally-package-types --sourcemap sourcemap.json Packages/
 	wally-package-types --sourcemap sourcemap.json ServerPackages/
-
-t_fix: wally
-	OSYRIS_DIR=$(shell find $(PACKAGE_INDEX_DIR)/osyrisrblx_t*/t | head -n 1); \
-	if [ -d $$OSYRIS_DIR ]; then \
-		touch $$OSYRIS_DIR/.luaurc; \
-		echo '{"languageMode": "nonstrict"}' > $$OSYRIS_DIR/.luaurc; \
-	fi
